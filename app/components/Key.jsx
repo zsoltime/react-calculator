@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 const Key = (props) => {
   const { className, type, value } = props;
   function handleClick(e) {
-    console.log(e.target);
+    props.onClickEvent(e.target.dataset.value);
   }
   const classNames = className ? `keypad__btn ${className}` : 'keypad__btn';
   return (
@@ -26,6 +26,7 @@ Key.propTypes = {
   type: PropTypes.string,
   value: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  onClickEvent: PropTypes.func.isRequired,
 };
 
 export default Key;

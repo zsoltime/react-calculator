@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import FormattedNumber from 'FormattedNumber';
+
 const Display = (props) => {
   const { expression, result } = props;
   return (
@@ -8,20 +10,15 @@ const Display = (props) => {
         {expression}
       </div>
       <div className="result">
-        {result}
+        <FormattedNumber number={result} />
       </div>
     </div>
   );
 };
 
-Display.defaultProps = {
-  expression: '',
-  result: '0',
-};
-
 Display.propTypes = {
-  expression: PropTypes.string,
-  result: PropTypes.string,
+  expression: PropTypes.string.isRequired,
+  result: PropTypes.number.isRequired,
 };
 
 export default Display;
