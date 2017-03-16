@@ -20,11 +20,11 @@ FormattedNumber.defaultProps = {
 
 FormattedNumber.propTypes = {
   number: PropTypes.number.isRequired,
-  locales: PropTypes.oneOfType(
+  locales: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.string,
     PropTypes.array,
-  ),
+  ]),
 };
 
 export default FormattedNumber;
