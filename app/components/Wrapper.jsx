@@ -4,9 +4,7 @@ import Nav from 'Nav';
 const Wrapper = props => (
   <div>
     <Nav />
-    <div>
-      {props.children}
-    </div>
+    {props.children}
   </div>
 );
 
