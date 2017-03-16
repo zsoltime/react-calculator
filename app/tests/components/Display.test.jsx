@@ -14,7 +14,7 @@ describe('<Display />', () => {
     it('should display the result', () => {
       const result = 10;
       const display = render(<Display result={result} expression="" />);
-      const actualText = display.find('.result').text();
+      const actualText = display.find('.display__result').text();
 
       expect(actualText).toBe('10');
     });
@@ -32,7 +32,7 @@ describe('<Display />', () => {
       const display = render(
         <Display result={result} expression={expression} />
       );
-      const actualText = display.find('.expression').text();
+      const actualText = display.find('.display__expression').text();
 
       expect(actualText).toBe(expression);
     });

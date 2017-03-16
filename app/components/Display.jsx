@@ -6,10 +6,10 @@ const Display = (props) => {
   const { expression, result } = props;
   return (
     <div className="display">
-      <div className="expression">
+      <div className="display__expression">
         {expression}
       </div>
-      <div className="result">
+      <div className="display__result">
         <FormattedNumber number={result} />
       </div>
     </div>
