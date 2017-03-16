@@ -1,0 +1,22 @@
+.menu
+  display: flex
+  justify-content: flex-end
+  list-style: none
+  margin: 0 auto
+  padding: 1rem 0
+  width: 80vw
+
+  &__item
+    margin-right: 1rem
+
+    &:last-child
+      margin-right: 0
+
+  &__link
+    color: $link-color
+    text-decoration: none
+    transition: color .3s ease-in-out
+
+    &:hover,
+    &--active
+      color: $link-color-active
