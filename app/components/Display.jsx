@@ -7,7 +7,7 @@ const Display = (props) => {
   return (
     <div className="display">
       <div className="display__expression">
-        {expression}
+        <span>{expression}</span>
       </div>
       <div className="display__result">
         <FormattedNumber number={result} />
