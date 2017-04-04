@@ -18,7 +18,7 @@ const Nav = () => (
       >About</Link>
     </li>
     <li className="menu__item">
-      <a className="menu__link" href="#">More apps</a>
+      <a className="menu__link" href="http://zsolti.co">More apps</a>
     </li>
   </ul>
 );

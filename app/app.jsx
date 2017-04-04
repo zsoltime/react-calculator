@@ -5,8 +5,7 @@ import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 import Wrapper from 'Wrapper';
 import About from 'About';
 import Calculator from 'Calculator';
-
-require('applicationStyles');
+import 'styles';
 
 render(
   <Router history={browserHistory}>

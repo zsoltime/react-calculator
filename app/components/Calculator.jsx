@@ -49,7 +49,7 @@ class Calculator extends Component {
           expression={this.state.expression}
           result={this.state.result}
         />
-      <Keypad onClickEvent={this.handleInput} />
+        <Keypad onClickEvent={this.handleInput} />
       </div>
     );
   }

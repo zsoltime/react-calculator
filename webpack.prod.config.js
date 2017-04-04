@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -34,7 +35,6 @@ module.exports = {
       test: /\.jsx?$/,
       loaders: [
         'babel-loader',
-        'eslint-loader',
       ],
       exclude: /node_modules/,
     }, {
@@ -43,40 +43,37 @@ module.exports = {
         fallback: 'style-loader',
         use: [{
           loader: 'css-loader',
-          options: { sourceMap: true },
         }, {
           loader: 'postcss-loader',
           options: {
             plugins: () => [autoprefixer],
-            sourceMap: true,
           },
         }, {
           loader: 'sass-loader',
-          options: {
-            outputStyle: 'expanded',
-            sourceMap: true,
-          },
         }],
       }),
     }],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
     HtmlWebpackPluginConfig,
     ExtractTextPluginConfig,
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: true,
+        screw_ie8: true,
+      },
+      output: {
+        comments: false,
+        screw_ie8: true,
+      },
+      sourceMap: false,
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
   ],
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    overlay: true,
-    port: 3000,
-    publicPath: 'dist',
-    watchContentBase: true,
-  },
-  externals: {
-    // these lines are required for Enzyme
-    'react/addons': true,
-    'react/lib/ReactContext': 'window',
-    'react/lib/ExecutionEnvironment': true,
-  },
-  devtool: 'cheap-module-eval-source-map',
 };
