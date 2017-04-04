@@ -9,7 +9,7 @@ describe('<FormattedNumber />', () => {
     expect(FormattedNumber).toExist();
   });
 
-  it('should throw a TypeError if number is not a number', () => {
+  it('should throw a TypeError if prop is not a number', () => {
     const number = 'string';
     const formattedNumber = () => {
       render(<FormattedNumber number={number} />);
