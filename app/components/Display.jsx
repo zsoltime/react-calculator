@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import FormattedNumber from 'FormattedNumber';
+import ScaleText from 'ScaleText';
 
 const Display = (props) => {
   const { expression, result } = props;
@@ -10,7 +11,9 @@ const Display = (props) => {
         <span>{expression}</span>
       </div>
       <div className="display__result">
-        <FormattedNumber number={result} />
+        <ScaleText>
+          <FormattedNumber number={result} />
+        </ScaleText>
       </div>
     </div>
   );
