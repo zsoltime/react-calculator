@@ -12,7 +12,7 @@ describe('<Keypad />', () => {
 
   describe('render', () => {
     it('should render 19 Key components', () => {
-      const keypad = shallow(<Keypad />);
+      const keypad = shallow(<Keypad onClickEvent={f => f} />);
       const keys = keypad.find(Key);
 
       expect(keys.length).toBe(19);
