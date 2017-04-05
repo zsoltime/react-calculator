@@ -1,22 +1,28 @@
 .keypad
-  align-items: center
   display: flex
   flex-wrap: wrap
   height: 60vh
   justify-content: space-between
 
   &__btn
-    background-color: #aebabf
+    -webkit-tap-highlight-color: transparent
+    background-color: #aebbbe
     border: 0
-    color: rgba(black, .6)
+    color: inherit
     cursor: pointer
-    font-family: $font-family
-    font-size: 1rem
-    height: 20%
-    line-height: $line-height
-    padding: 0.5rem 1rem
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out
-    width: 25%
+    flex: 0 1 25%
+    font-family: inherit
+    font-size: inherit
+    padding: 0
+    transition: all 0.3s ease-in-out
+    user-select: none
+
+    &:active
+      box-shadow: 0 0 5px rgba(black, .5) inset
+
+    &:focus
+      box-shadow: 0 0 1px crimson inset
+      outline: none
 
     &:nth-child(4n),
     &:last-child
