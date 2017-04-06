@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Nav from 'Nav';
 
 const Wrapper = props => (
-  <div>
+  <div className="wrapper">
     <Nav />
     {props.children}
   </div>
