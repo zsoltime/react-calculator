@@ -2,14 +2,14 @@ import React from 'react';
 import { Link, IndexLink } from 'react-router';
 
 const Nav = () => (
-  <nav role="navigation">
+  <nav role="navigation" className="navigation">
     <ul className="menu">
       <li className="menu__item">
         <IndexLink
           to="/"
           className="menu__link"
           activeClassName="menu__link--active"
-        >Home</IndexLink>
+        >Calculator</IndexLink>
       </li>
       <li className="menu__item">
         <Link
