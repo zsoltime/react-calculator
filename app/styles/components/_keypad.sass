@@ -3,11 +3,11 @@
   flex-wrap: wrap
   height: 60vh
   justify-content: space-between
-  max-height: 412px
+  max-height: calc(#{$calc-height} - #{$display-height})
 
   &__btn
     -webkit-tap-highlight-color: transparent
-    background-color: #aebbbe
+    background-color: $nav-background
     border: 0
     color: inherit
     cursor: pointer
@@ -22,15 +22,15 @@
       box-shadow: 0 0 5px rgba(black, .5) inset
 
     &:focus
-      box-shadow: 0 0 1px crimson inset
+      box-shadow: 0 0 1px $key-focus-color inset
       outline: none
 
     &:nth-child(4n),
     &:last-child
-      background-color: #ccd6dd
+      background-color: $op-key-background
 
     &:nth-child(-n+3)
-      background-color: #777a7a
+      background-color: $func-key-background
 
     &--grow
       flex-grow: 1

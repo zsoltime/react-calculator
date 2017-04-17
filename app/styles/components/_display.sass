@@ -1,26 +1,27 @@
 .display
-  background-color: crimson
-  color: rgba(255, 255, 255, 0.8)
+  color: $display-color
   display: flex
   flex-direction: column
-  font-size: 4rem
+  font-size: $display-size
   font-weight: 100
-  height: 8rem
+  height: $display-height
   position: relative
 
   &__expression
-    font-size: .75rem
-    height: 2rem
-    line-height: 2rem
+    background-color: $expression-background
+    font-size: $expression-size
+    height: $expression-height
+    line-height: $expression-height
     overflow-x: hidden
     padding: 0 1rem
     text-align: right
     white-space: nowrap
 
   &__result
+    background-color: $result-background
     bottom: 0
-    height: 6rem
-    line-height: 6rem
+    height: $result-height
+    line-height: $result-height
     position: absolute
     text-align: right
     width: 100%
