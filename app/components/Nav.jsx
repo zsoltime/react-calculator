@@ -1,22 +1,24 @@
 import React from 'react';
-import { Link, IndexLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
   <nav role="navigation" className="navigation">
     <ul className="menu">
       <li className="menu__item">
-        <IndexLink
+        <NavLink
+          exact
           to="/"
           className="menu__link"
           activeClassName="menu__link--active"
-        >Calculator</IndexLink>
+        >Calculator</NavLink>
       </li>
       <li className="menu__item">
-        <Link
+        <NavLink
+          exact
           to="/about"
           className="menu__link"
           activeClassName="menu__link--active"
-        >About</Link>
+        >About</NavLink>
       </li>
       <li className="menu__item">
         <a className="menu__link" href="http://zsolti.co">More apps</a>
