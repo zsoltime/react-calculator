@@ -1,6 +1,10 @@
-# WIP React Calculator
+# React Calculator
 
 This is my calculator for Free Code Camp's [first advanced front end projects](https://www.freecodecamp.com/challenges/build-a-javascript-calculator).
+
+[![React calculator](https://github.com/zsoltime/react-calculator/raw/master/img/preview.jpg)](https://zsolti.co/react/calculator)
+
+Demo is available on my site: [React calculator](https://zsolti.co/react/calculator)
 
 ## User Stories
 
