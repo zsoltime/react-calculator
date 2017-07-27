@@ -1,5 +1,6 @@
 .navigation
   background-color: $op-key-background
+  margin-bottom: 1rem
   width: 100%
 
 .menu
@@ -17,11 +18,11 @@
       margin-right: 0
 
   &__link
-    color: $link-color
+    border-color: transparent
+    color: $nav-link-color
     text-decoration: none
-    transition: color .3s ease-in-out
 
     &:hover,
     &--active
-      color: $link-color-active
-      border-bottom: 1px solid
+      color: $nav-link-color-active
+      border-color: $nav-link-color-active

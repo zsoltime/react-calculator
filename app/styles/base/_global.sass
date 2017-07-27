@@ -13,6 +13,19 @@ body
   line-height: $line-height
   margin: 0
 
+a
+  border-bottom: 1px solid transparentize($link-color, .9)
+  color: $link-color
+  text-decoration: none
+  transition: color .3s ease-in-out, border .3s ease-in-out
+
+  &:hover
+    border-bottom: 1px solid transparentize($link-color-hover, .5)
+    color: $link-color-hover
+
+  &:focus
+    outline: thin dotted
+
 .wrapper
   align-items: center
   display: flex
